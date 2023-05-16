@@ -3,8 +3,17 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'angular-app';
+  title = 'home-work';
+  submit(form: any){
+    if(form.valid){
+      console.log(form.value);
+    } else {
+      form.control.markAllAsTouched()
+    }
+  }
+
+
 }
